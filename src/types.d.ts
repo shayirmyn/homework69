@@ -3,10 +3,11 @@ type RATING = {
 }
 
 type IMAGE = {
-    original: string,
+    original: string;
+    medium: string,
 }
 
-type SHOW = {
+export interface IShow {
     id: number;
     name: string;
     genres: string[];
@@ -16,5 +17,5 @@ type SHOW = {
 }
 export interface IGet {
    score: number;
-   show: SHOW;
+   show: IShow;
 }

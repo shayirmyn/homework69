@@ -3,3 +3,29 @@
     margin: 0 auto 0 70px;
     position: relative;
 }
+
+.autocomplete {
+    position: absolute;
+    left: 0;
+    top: 180px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    z-index: 111;
+    background: white;
+    max-height: 240px;
+    height: auto;
+    overflow: auto;
+}
+
+.autocompleteItem {
+    padding: 10px;
+}
+
+.autocompleteItem:hover {
+    background: #e5e1e1;
+    cursor: pointer;
+    transition: cubic-bezier(1, 0, 0, 1) .2s all;
+}

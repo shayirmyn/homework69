@@ -1,12 +1,12 @@
 import React from 'react';
-import {useAppDispatch} from "../../app/hooks";
+import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {fetchShows} from "../../store/searchThunk";
 
 const SearchForm = () => {
 
     const dispatch = useAppDispatch();
 
-    // const [inputValue, setInputValue] = useState('');
+    const shows = useAppSelector(state => state.show.shows);
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(fetchShows(e.target.value))
@@ -26,7 +26,15 @@ const SearchForm = () => {
                             onChange={onChange}
                             placeholder="search.."
                         />
+                        <ul className="autocomplete">
 
+                            {
+                                shows.map((every) => (
+                                    <li key={every.show.name}
+                                        className="autocompleteItem">{every.show.name}</li>
+                                ))
+                            }
+                        </ul>
                     </div>
                 </form>
             </div>

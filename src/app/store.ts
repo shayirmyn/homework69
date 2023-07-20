@@ -3,7 +3,7 @@ import {showsReducers} from "../store/searchSlice";
 
 export const store = configureStore({
     reducer: {
-        shows: showsReducers,
+        show: showsReducers,
     },
 });
 

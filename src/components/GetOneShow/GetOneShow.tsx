@@ -24,6 +24,16 @@ const GetOneShow = () => {
                   <strong>genres: </strong>
                   {show.genres}
                 </p>
+
+                <p>
+                  <strong>premiered: </strong>
+                  {show.premiered}
+                </p>
+
+                <p>
+                  <strong>runtime: </strong>
+                  {show.runtime}
+                </p>
               </div>
             </div>
           </div>

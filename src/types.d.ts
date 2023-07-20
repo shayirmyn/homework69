@@ -1,22 +1,22 @@
 type RATING = {
-    average: number;
-}
+  average: number;
+};
 
 type IMAGE = {
-    original: string;
-    medium: string,
-}
+  original: string;
+  medium: string;
+};
 
 export interface IShow {
-    id: number;
-    name: string;
-    genres: string[];
-    runtime: number;
-    rating: RATING;
-    image: IMAGE;
-    premiered: string;
+  id: number;
+  name: string;
+  genres: string[];
+  runtime: number;
+  rating: RATING;
+  image: IMAGE;
+  premiered: string;
 }
 export interface IGet {
-   score: number;
-   show: IShow;
+  score: number;
+  show: IShow;
 }

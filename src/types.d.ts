@@ -14,6 +14,7 @@ export interface IShow {
     runtime: number;
     rating: RATING;
     image: IMAGE;
+    premiered: string;
 }
 export interface IGet {
    score: number;

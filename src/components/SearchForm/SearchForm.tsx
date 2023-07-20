@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
-import {fetchShows} from "../../store/searchThunk";
+import {fetchShows, oneShow} from "../../store/searchThunk";
 import ShowItem from "../ShowItem/ShowItem";
 
 const SearchForm = () => {
@@ -41,6 +41,7 @@ const SearchForm = () => {
                                 {
                                     shows.map((every) => (
                                         <li key={every.show.name}
+                                            onClick={() => dispatch(oneShow(every.show.id))}
                                             className="autocompleteItem">{every.show.name}</li>
                                     ))
                                 }
